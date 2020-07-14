@@ -1,0 +1,17 @@
+name: test action
+
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print a greeting
+      env:
+        MY_VAR: Hi!s
+      run:
+        echo $MY_VAR.
+
